@@ -5,8 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack-cli --config webpack.config.js",
     "start:dev": "nodemon src/server/index"
   },
   "keywords": [],
@@ -20,6 +19,7 @@
     "dotenv": "^10.0.0",
     "eslint": "^7.29.0",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "history": "^4.10.1",
     "ignore-styles": "^5.0.1",
     "md5": "^2.3.0",
@@ -34,21 +34,22 @@
     "redux": "^4.1.0",
     "webpack": "^5.41.1",
     "webpack-dev-middleware": "^5.0.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-manifest-plugin": "^3.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "compression-webpack-plugin": "^8.0.1",
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
-    "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^1.6.2",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.8",
     "sass-loader": "^12.1.0",
+    "terser-webpack-plugin": "^5.1.4",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
